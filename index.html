@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexusHope | Download Center</title>
+<link rel="icon" href="logo.png">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#ff0000;
+  --neon:#ff3b3b;
+  --bg:#050507;
+  --card:#111118;
+  --glass:rgba(255,255,255,.05);
+  --text:#f1f1f1;
+  --muted:#777;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Poppins, sans-serif;
+  background:radial-gradient(circle at top,#1a0000,#000);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* SIDEBAR */
+nav{
+  position:fixed;
+  top:0;left:0;
+  width:240px;height:100vh;
+  background:linear-gradient(180deg,#000,#080808);
+  border-right:1px solid #1a1a1a;
+  padding:25px;
+}
+
+.logo{
+  font-family:Orbitron;
+  font-size:24px;
+  font-weight:800;
+  color:var(--red);
+}
+.logo span{color:white;}
+
+nav ul{
+  list-style:none;
+  margin-top:35px;
+}
+
+nav ul li a{
+  display:block;
+  padding:12px 14px;
+  margin:6px 0;
+  color:var(--muted);
+  text-decoration:none;
+  border-radius:10px;
+  transition:.25s;
+}
+
+nav ul li a:hover{
+  background:var(--glass);
+  color:white;
+  transform:translateX(6px);
+}
+
+/* MAIN */
+main{
+  margin-left:240px;
+  padding:50px;
+}
+
+/* HEADER */
+header h1{
+  font-family:Orbitron;
+  font-size:3rem;
+  background:linear-gradient(90deg,#ff0000,#ff6b6b);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+header p{
+  color:var(--muted);
+  margin-top:10px;
+}
+
+/* SEARCH */
+.search{
+  margin:30px 0;
+}
+
+.search input{
+  width:100%;
+  padding:14px 18px;
+  border-radius:14px;
+  border:1px solid #222;
+  background:#0b0b12;
+  color:white;
+  outline:none;
+  transition:.2s;
+}
+
+.search input:focus{
+  border-color:var(--red);
+  box-shadow:0 0 12px rgba(255,0,0,.4);
+}
+
+/* TAGS */
+.tags{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
+
+.tag{
+  padding:6px 14px;
+  border:1px solid #333;
+  border-radius:20px;
+  font-size:.75rem;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.tag:hover,
+.tag.active{
+  background:var(--red);
+  border-color:var(--red);
+}
+
+/* SECTIONS */
+.section{
+  margin-top:60px;
+}
+
+.section h2{
+  font-family:Orbitron;
+  font-size:1.4rem;
+  border-left:4px solid var(--red);
+  padding-left:12px;
+  margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:linear-gradient(180deg,#12121c,#08080f);
+  border:1px solid #222;
+  border-radius:18px;
+  padding:22px;
+  cursor:pointer;
+  transition:.35s;
+  position:relative;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  border-color:var(--red);
+  box-shadow:0 0 20px rgba(255,0,0,.25);
+}
+
+.card h3{
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:.8rem;
+  color:var(--muted);
+}
+
+.badge{
+  position:absolute;
+  top:12px;right:12px;
+  background:var(--red);
+  padding:3px 10px;
+  font-size:.65rem;
+  border-radius:10px;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(6px);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.modal-box{
+  background:linear-gradient(180deg,#14141f,#07070d);
+  border:1px solid var(--red);
+  border-radius:20px;
+  padding:35px;
+  width:90%;
+  max-width:600px;
+  position:relative;
+  animation:fade .2s ease;
+}
+
+@keyframes fade{
+  from{transform:scale(.9);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+
+.close{
+  position:absolute;
+  top:14px;right:18px;
+  font-size:26px;
+  color:#aaa;
+  cursor:pointer;
+}
+
+.modal-box h2{
+  font-family:Orbitron;
+  color:var(--red);
+}
+
+.modal-box p{
+  margin-top:12px;
+  font-size:.9rem;
+  color:#ccc;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:22px;
+  padding:13px 36px;
+  background:linear-gradient(90deg,#ff0000,#ff4444);
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 20px rgba(255,0,0,.6);
+}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  nav{
+    width:100%;
+    height:auto;
+    position:relative;
+  }
+  main{
+    margin-left:0;
+    padding:20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Nexus<span>Hope</span></div>
+  <ul>
+    <li><a href="#jogos">🎮 Jogos</a></li>
+    <li><a href="#ferramentas">🛠️ Ferramentas</a></li>
+    <li><a href="#mobile">📱 Mobile</a></li>
+    <li><a href="#extras">💾 Extras</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<header>
+  <h1>NEXUSHOPE</h1>
+  <p>Central De Downloads.</p>
+</header>
+
+<div class="search">
+  <input type="text" id="search" placeholder="Buscar download...">
+</div>
+
+<div class="tags">
+  <div class="tag active" data-tag="all">Tudo</div>
+  <div class="tag" data-tag="leve">Leves</div>
+  <div class="tag" data-tag="pesado">Pesados</div>
+  <div class="tag" data-tag="tool">Ferramentas</div>
+</div>
+
+<div class="section" id="jogos">
+<h2>🎮 Jogos
+<div class="grid">
+
+<div class="card" data-tag="leve" onclick="openModal('pvz')">
+<span class="badge">TowerDefense</span>
+<h3>Plants vs Zombies</h3>
+<p>Sobrevivência Divertida.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('nfs')">
+<span class="badge">CORRIDA</span>
+<h3>Need For Speed Most Wanted</h3>
+<p>NFSMW BLACK EDITION!</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('worldbox')">
+<span class="badge">SANDBOX</span>
+<h3>WorldBox</h3>
+<p>Simulador de deus.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('farcry')">
+<span class="badge">FPS</span>
+<h3>Far Cry 1</h3>
+<p>FPS de Mundo aberto!</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('farcry2')">
+<span class="badge">FPS</span>
+<h3>Far Cry 2</h3>
+<p>FPS com um mundo aberto insano.</p>
+</div>
+
+</div>
+</div>
+
+<div class="section" id="ferramentas">
+<h2>🛠️ Ferramentas</h2>
+<div class="grid">
+
+<div class="card" data-tag="tool" onclick="openModal('camtasia')">
+<span class="badge">EDITOR</span>
+<h3>Camtasia 8.4</h3>
+<p>Editor de vídeo para computadores de baixo recurso.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('boost')">
+<span class="badge">Booster</span>
+<h3>SoundBooster</h3>
+<p>Aplicativo para aumentar o som do seu computador em %500!</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('fraps')">
+<span class="badge">CONTADOR FPS</span>
+<h3>Fraps</h3>
+<p>Confira o FPS do seu jogo.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('control')">
+<span class="badge">Drivers</span>
+<h3>Xbox Controle</h3>
+<p>Baixe os drivers do seu controle Xbox.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('photo')">
+<span class="badge">Player Foto</span>
+<h3>IrFanView.</h3>
+<p>O vizualizador de fotos mais leve e bom.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('winrar')">
+<span class="badge">UNZIP</span>
+<h3>WinRar</h3>
+<p>Extraia seus arquivos .zip, .rar e etc.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('ventoy')">
+<span class="badge">BOOT</span>
+<h3>Ventoy</h3>
+<p>Deixe seu pendrive bootável.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('vlc')">
+<span class="badge">PLAYER</span>
+<h3>VlC</h3>
+<p>O melhor vizualizador de video atualmente.</p>
+</div>
+
+
+<div class="card" data-tag="tool" onclick="openModal('you2')">
+<span class="badge">Download</span>
+<h3>You2Mate</h3>
+<p>O app para baixar vídeos do youtube.</p>
+</div>
+
+</div>
+</div>
+
+<div class="section" id="mobile">
+<h2>📱 Mobile</h2>
+<div class="grid">
+
+<div class="card" data-tag="leve" onclick="openModal('pstouch')">
+<span class="badge">APK</span>
+<h3>PS Touch</h3>
+<p>Editor de fotos mobile, completo na sua melhor versão.</p>
+</div>
+
+</div>
+</div>
+
+<div class="section" id="extras">
+<h2>💾 Extras</h2>
+<div class="grid">
+
+<div class="card" data-tag="tool" onclick="openModal('ads')">
+<span class="badge">EXTRA</span>
+<h3>Remover anúncios</h3>
+<p>Android</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('mcpe')">
+<span class="badge">EXTRA</span>
+<h3>Desbloquear MCPE!</h3>
+<p>PC</p>
+</div>
+
+</div>
+</div>
+
+</main>
+
+<!-- MODAIS -->
+<div id="modal-pvz" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('pvz')">×</span>
+<h2>Plants vs Zombies</h2>
+<p>Defenda sua casa contra zumbis.</p>
+<a class="btn" href="https://www.mediafire.com/file/vrewb4p7a3f1otx/Plantas+VS+Zombies+GOTY.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-nfs" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('nfs')">×</span>
+<h2>Need For Speed Mos Wanted</h2>
+<p>Corrida e historia na versão Black Edition.</p>
+<a class="btn" href="https://mega.nz/file/PlwUGS6S#Im-VfZLtbXXg0if-cf5Jj2mAndX2hBsa0tfjMARjjWQ" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-farcry2" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('farcry2')">×</span>
+<h2>FarCry 2</h2>
+<p>FPS insano com muitas missões e leve.</p>
+<a class="btn" href="https://www.mediafire.com/file/fk1j2vibzvf3yh3/FarCry+2+(Edition+Fourtune).zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-photo" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('photo')">×</span>
+<h2>IrFanView</h2>
+<p>O vizualizador de fotos mais leve.</p>
+<a class="btn" href="https://www.mediafire.com/file/6becnhsj50ic788/Viwer+de+fotos+x64.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-winrar" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('winrar')">×</span>
+<h2>WinRar</h2>
+<p>Extraia seus arquivos.</p>
+<a class="btn" href="https://www.mediafire.com/file/7offp2f10hmlv65/winrar-x64-713br.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-ventoy" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('ventoy')">×</span>
+<h2>Ventoy</h2>
+<p>Deixe seu pendrive bootavel.</p>
+<a class="btn" href="https://www.mediafire.com/file/0rfiy6fstxth6cv/ventoy-1.1.07-windows.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-vlc" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('vlc')">×</span>
+<h2>VLC</h2>
+<p>Player de vídeos e musicas.</p>
+<a class="btn" href="https://www.mediafire.com/file/ldn7lkkavsv7my0/vlc-3.0.21-win32.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-you2" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('you2')">×</span>
+<h2>You2Mate Downlod</h2>
+<p>Baixe vídeos e musicas do youtube.</p>
+<a class="btn" href="https://www.mediafire.com/file/tcum83qunj0gysy/You2Mate+Donwload.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-control" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('control')">×</span>
+<h2>Xbox Controller Driver</h2>
+<p>Comprou um controle xbox e ele não reconheceu no PC? Instale essa ferramenta e use normalmente..</p>
+<a class="btn" href="https://www.mediafire.com/file/9y184mv1wcfq55l/microsoft-xbox-360-controller-driver-6-2-29-0.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-mcpe" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('mcpe')">×</span>
+<h2>Unlocked Minecraft</h2>
+<p>Sabe quando você baixa o minecraft bedrock for windows e ele tem aquele tempo? Remova ele usando essa ferramenta.</p>
+<a class="btn" href="https://www.mediafire.com/file/xlhtwkwjf8gy3lw/MCPE+UNLOCKED.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-fraps" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('fraps')">×</span>
+<h2>Fraps</h2>
+<p>Confira a quantos FPS o seu jogo roda.</p>
+<a class="btn" href="https://www.mediafire.com/file/472grt7yilllwf5/Fraps.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-boost" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('boost')">×</span>
+<h2>SoundBooster</h2>
+<p>Aumente o audio de seu computador em %500.</p>
+<a class="btn" href="https://www.mediafire.com/file/v3edym2br37u6sl/SoundBooster.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-worldbox" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('worldbox')">×</span>
+<h2>WorldBox</h2>
+<p>Simulador de um deus.</p>
+<a class="btn" href="https://www.mediafire.com/file/s7k5givy04taape/WorldBox_v0.22.9.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-farcry" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('farcry')">×</span>
+<h2>Far Cry 1</h2>
+<p>FPS clássico.</p>
+<a class="btn" href="https://www.mediafire.com/file/6oyae42tu6qc154/Far+Cry+1.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-camtasia" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('camtasia')">×</span>
+<h2>Camtasia 8.4</h2>
+<p>Editor de vídeo para computadores de baixessimo recurso.</p>
+<a class="btn" href="https://www.mediafire.com/file/ehviz08gnpayj0e/Camtasia+Studio+8+MingPlay+Games.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-pstouch" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('pstouch')">×</span>
+<h2>PS Touch</h2>
+<p>O melhor editor de fotos/designer mobile na sua versão 9.9.9!</p>
+<a class="btn" href="https://mega.nz/file/1V8wQDIT#o_rcg5FRecSNfNQv1BPTWhXkHvonwTA6gtkIBn5M8JI" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-ads" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('ads')">×</span>
+<h2>Remover anúncios</h2>
+<p>Tutorial de como remover anuncios de jogos/apps para Android.</p>
+<a class="btn" href="https://www.mediafire.com/file/qnpflr1dmhy977k/NO+ADs+ANDROID.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div style="text-align:center;margin-bottom:15px;">
+  <a href="https://discord.gg/8G7TensUAp" target="_blank" class="discord-btn">
+    🚀 Entre em nosso Discord!
+  </a>
+</div>
+
+
+
+<script>
+// MODAL
+function openModal(id){
+  document.getElementById("modal-"+id).style.display="flex";
+}
+function closeModal(id){
+  document.getElementById("modal-"+id).style.display="none";
+}
+window.onclick=e=>{
+  if(e.target.classList.contains("modal")){
+    e.target.style.display="none";
+  }
+};
+
+// SEARCH
+document.getElementById("search").addEventListener("input",e=>{
+  const v=e.target.value.toLowerCase();
+  document.querySelectorAll(".card").forEach(c=>{
+    c.style.display=c.innerText.toLowerCase().includes(v)?"block":"none";
+  });
+});
+
+// TAG FILTER
+document.querySelectorAll(".tag").forEach(tag=>{
+  tag.onclick=()=>{
+    document.querySelectorAll(".tag").forEach(t=>t.classList.remove("active"));
+    tag.classList.add("active");
+    const t=tag.dataset.tag;
+    document.querySelectorAll(".card").forEach(c=>{
+      c.style.display=(t==="all"||c.dataset.tag===t)?"block":"none";
+    });
+  };
+});
+</script>
+
+</body>
+</html>
