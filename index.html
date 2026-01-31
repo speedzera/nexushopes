@@ -274,7 +274,12 @@ header p{
     <li><a href="#ferramentas">🛠️ Ferramentas</a></li>
     <li><a href="#mobile">📱 Mobile</a></li>
     <li><a href="#extras">💾 Extras</a></li>
-   <p style="font-size: 15px;">📞 DMCA: nexushope31@gmail.com</p>
+   <p style="font-size: 15px;"><span style="color: rgb(238, 255, 0);">📞 DMCA: nexushope31@gmail.com</span></p>
+   <div></div>
+  </p>
+</p> --------------------
+  </p>
+    <p style="font-size: 15px;"><span style="color: rgb(72, 255, 0);">Todos jogos e apps foram pegos da internet, podendo conter algum mallware, baixe por sua conta e risco.</span></p>
   </ul>
 </nav>
 
@@ -312,6 +317,42 @@ header p{
 <p>NFSMW BLACK EDITION!</p>
 </div>
 
+<div class="card" data-tag="leve" onclick="openModal('doom1')">
+<span class="badge">RunAndGun</span>
+<h3>Doom 1</h3>
+<p>FPS acelerado e extremamente leve.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('doom2')">
+<span class="badge">RunAndGun</span>
+<h3>Doom 2</h3>
+<p>FPS acelerado e extremamente leve.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('undertale')">
+<span class="badge">BulletHell</span>
+<h3>Undertale</h3>
+<p>RPG com moralidade.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('balde')">
+<span class="badge">Run</span>
+<h3> Baldi's Basics</h3>
+<p>Fuja da escola.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('fnaf4')">
+<span class="badge">Click</span>
+<h3>Five Nights At Freddy 4</h3>
+<p>SOBREVIVA a 5 noites.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('terraria')">
+<span class="badge">Survival</span>
+<h3>Terraria</h3>
+<p>Sobrevivência em 2d.</p>
+</div>
+
 <div class="card" data-tag="leve" onclick="openModal('worldbox')">
 <span class="badge">SANDBOX</span>
 <h3>WorldBox</h3>
@@ -336,6 +377,12 @@ header p{
 <p>FPS de guerra.</p>
 </div>
 
+<div class="card" data-tag="leve" onclick="openModal('papapc')">
+<span class="badge">Flash</span>
+<h3>Papa´s Collection</h3>
+<p>Coleção de jogos do Papa´s.</p>
+</div>
+
 </div>
 </div>
 
@@ -353,6 +400,30 @@ header p{
 <span class="badge">Booster</span>
 <h3>SoundBooster</h3>
 <p>Aplicativo para aumentar o som do seu computador em %500!</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('pcsx2')">
+<span class="badge">Player</span>
+<h3>PCSX2</h3>
+<p>Aplicativo para emular um ps2!</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('transmission')">
+<span class="badge">Download</span>
+<h3>Transmission</h3>
+<p>Aplicativo para baixar arquivos TORRENTS!</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('free')">
+<span class="badge">Download</span>
+<h3>Free Download Manager</h3>
+<p>Aplicativo para baixar arquivos da internet super rápidos!</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('adobe')">
+<span class="badge">Player</span>
+<h3>AdobeFlashPlayer</h3>
+<p>Aplicativo para jogar jogos flash.</p>
 </div>
 
 <div class="card" data-tag="tool" onclick="openModal('fraps')">
@@ -417,6 +488,12 @@ header p{
 <p>Editor de vídeo completo!</p>
 </div>
 
+<div class="card" data-tag="leve" onclick="openModal('papaan')">
+<span class="badge">Jogo</span>
+<h3>Papa´s Collection</h3>
+<p>Pack da série Papa´s!</p>
+</div>
+
 <div class="card" data-tag="pesados" onclick="openModal('capo')">
 <span class="badge">EDITOR</span>
 <h3>CapCut</h3>
@@ -442,6 +519,12 @@ header p{
 <p>PC</p>
 </div>
 
+<div class="card" data-tag="tool" onclick="openModal('depe')">
+<span class="badge">EXTRA</span>
+<h3>Dependências</h3>
+<p>PC</p>
+</div>
+
 </div>
 </div>
 
@@ -457,12 +540,129 @@ header p{
 </div>
 </div>
 
+<div id="modal-terraria" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('terraria')">×</span>
+<h2>Terraria</h2>
+<p>Survival insano em 2d!</p>
+<a class="btn" href="https://www.mediafire.com/file/e41ktawjhoyi3jj/Terraria.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-free" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('free')">×</span>
+<h2>FDM</h2>
+<p>Seu donwload está demorando? Instale o FDM e baixe com rapidez!</p>
+<a class="btn" href="https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-pcsx2" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('pcsx2')">×</span>
+<h2>PCSX2</h2>
+<p>Emule um ps2 no seu pc! (ja vem com bios)</p>
+<a class="btn" href="https://www.mediafire.com/file/3i9igefkbzcmh46/PCSX2.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-papapc" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('papapc')">×</span>
+<h2>Papa´s Collection PC</h2>
+<p>Uma série de jogos da franquia Papa´s Flash.</p>
+<a class="btn" href="https://www.mediafire.com/file/iuew4g2yerbcbiw/Papa%25C2%25B4s_Games_-_Collection_%2528PC%2529.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-papaan" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('papaan')">×</span>
+<h2>Papa´s Collection ANDROID</h2>
+<p>Uma série de jogos da franquia Papa´s para celular.</p>
+<a class="btn" href="https://www.mediafire.com/file/70x2r1dtskut99o/Papa%25C2%25B4s_Collection_%2528ANDROID%2529.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-transmission" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('transmission')">×</span>
+<h2>Transmission</h2>
+<p>O melhor mais leve download de torrents.</p>
+<a class="btn" href="https://www.mediafire.com/file/l0hcvgcj3vxt5pc/Transmission+(Torrent).zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-doom1" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('doom1')">×</span>
+<h2>DOOM 1</h2>
+<p>Mate os tinhoso em marte!</p>
+<a class="btn" href="https://www.mediafire.com/file/9i7gg4t8qgqrg36/Doom_1.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-doom2" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('doom2')">×</span>
+<h2>DOOM 2</h2>
+<p>Mate os tinhoso em marte!</p>
+<a class="btn" href="https://www.mediafire.com/file/jcjeuu1e58dtz0d/Doom_2.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-fnaf4" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('fnaf4')">×</span>
+<h2>FNAF 4</h2>
+<p>Sobreviva 5 noites com o Freddy!</p>
+<a class="btn" href="https://www.mediafire.com/file/ubyufqld8frzp93/Five_Nights_At_Freddys_4.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-undertale" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('undertale')">×</span>
+<h2>Undertale</h2>
+<p>RPG incrivel!</p>
+<a class="btn" href="https://www.mediafire.com/file/t7ijhnxsovjf68r/Undertale.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-depe" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('depe')">×</span>
+<h2>Instalador de Depedências.</h2>
+<p>Baixou um jogo deu erro de DLL ou não abriu? Instale as dependencias.</p>
+<a class="btn" href="https://www.mediafire.com/file/03ejofbwahqmr3k/Dependencies.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-adobe" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('adobe')">×</span>
+<h2>Adobe Flash PLayer</h2>
+<p>Baixou um jogo e é flash? Execute ele no adobe!</p>
+<a class="btn" href="https://www.mediafire.com/file/ncwfehqev3rl4uk/Adobe_Flash_Player_32.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
 <div id="modal-nfs" class="modal">
 <div class="modal-box">
 <span class="close" onclick="closeModal('nfs')">×</span>
-<h2>Need For Speed Mos Wanted</h2>
+<h2>Need For Speed Most Wanted</h2>
 <p>Corrida e historia na versão Black Edition.</p>
 <a class="btn" href="https://mega.nz/file/PlwUGS6S#Im-VfZLtbXXg0if-cf5Jj2mAndX2hBsa0tfjMARjjWQ" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-balde" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('balde')">×</span>
+<h2>Baldi's Basics</h2>
+<p>Tente fugir da escola enquanto todos estão contra você. Créditos do jogo: OpitiJuegos!</p>
+<a class="btn" href="https://www.mediafire.com/file/z2n5ix2ev1klfh8/Baldis+Basic+-+By+OpitiJuegos.zip/file" target="_blank">BAIXAR</a>
 </div>
 </div>
 
