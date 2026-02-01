@@ -273,6 +273,8 @@ header p{
     <li><a href="#jogos">🎮 Jogos</a></li>
     <li><a href="#ferramentas">🛠️ Ferramentas</a></li>
     <li><a href="#mobile">📱 Mobile</a></li>
+    <li><a href="#emuladores">🧰 Emuladores</a></li>
+    <li><a href="#emular">📡Para Emular</a></li>
     <li><a href="#extras">💾 Extras</a></li>
    <p style="font-size: 15px;"><span style="color: rgb(238, 255, 0);">📞 DMCA: nexushope31@gmail.com</span></p>
    <div></div>
@@ -305,10 +307,23 @@ header p{
 <h2>🎮 Jogos
 <div class="grid">
 
+
+<div class="card" data-tag="leve" onclick="openModal('doom1')">
+<span class="badge">RunAndGun</span>
+<h3>Doom 1</h3>
+<p>FPS acelerado e extremamente leve.</p>
+</div>
+
 <div class="card" data-tag="leve" onclick="openModal('pvz')">
 <span class="badge">TowerDefense</span>
 <h3>Plants vs Zombies</h3>
 <p>Sobrevivência Divertida.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('cod1')">
+<span class="badge">FPS</span>
+<h3>Call Of Duty</h3>
+<p>Segunda guerra, tiro, porrada e bomba.</p>
 </div>
 
 <div class="card" data-tag="leve" onclick="openModal('nfs')">
@@ -317,10 +332,11 @@ header p{
 <p>NFSMW BLACK EDITION!</p>
 </div>
 
-<div class="card" data-tag="leve" onclick="openModal('doom1')">
-<span class="badge">RunAndGun</span>
-<h3>Doom 1</h3>
-<p>FPS acelerado e extremamente leve.</p>
+
+<div class="card" data-tag="pesado" onclick="openModal('alc')">
+<span class="badge">Gótico</span>
+<h3>Alice Madness Returns</h3>
+<p>A loucura da alice está de volta.</p>
 </div>
 
 <div class="card" data-tag="leve" onclick="openModal('doom2')">
@@ -339,6 +355,12 @@ header p{
 <span class="badge">Run</span>
 <h3> Baldi's Basics</h3>
 <p>Fuja da escola.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('nfsu')">
+<span class="badge">Corrida</span>
+<h3>Need for Speed Underground</h3>
+<p>Faça corridas e ganhe reputação!</p>
 </div>
 
 <div class="card" data-tag="leve" onclick="openModal('fnaf4')">
@@ -402,12 +424,6 @@ header p{
 <p>Aplicativo para aumentar o som do seu computador em %500!</p>
 </div>
 
-<div class="card" data-tag="tool" onclick="openModal('pcsx2')">
-<span class="badge">Player</span>
-<h3>PCSX2</h3>
-<p>Aplicativo para emular um ps2!</p>
-</div>
-
 <div class="card" data-tag="tool" onclick="openModal('transmission')">
 <span class="badge">Download</span>
 <h3>Transmission</h3>
@@ -418,12 +434,6 @@ header p{
 <span class="badge">Download</span>
 <h3>Free Download Manager</h3>
 <p>Aplicativo para baixar arquivos da internet super rápidos!</p>
-</div>
-
-<div class="card" data-tag="tool" onclick="openModal('adobe')">
-<span class="badge">Player</span>
-<h3>AdobeFlashPlayer</h3>
-<p>Aplicativo para jogar jogos flash.</p>
 </div>
 
 <div class="card" data-tag="tool" onclick="openModal('fraps')">
@@ -488,6 +498,12 @@ header p{
 <p>Editor de vídeo completo!</p>
 </div>
 
+<div class="card" data-tag="leve" onclick="openModal('60seconds')">
+<span class="badge">Jogo</span>
+<h3>60 Seconds</h3>
+<p>Sobreviva o máximo que puder após o apocalipse.</p>
+</div>
+
 <div class="card" data-tag="leve" onclick="openModal('papaan')">
 <span class="badge">Jogo</span>
 <h3>Papa´s Collection</h3>
@@ -527,6 +543,55 @@ header p{
 
 </div>
 </div>
+<div class="section" id="emular">
+<h2>🚜 Emuladores
+<div class="grid">
+
+<div class="card" data-tag="tool" onclick="openModal('RetroArch')">
+<span class="badge">Emular</span>
+<h3>RetroArch</h3>
+<p>Aplicativo para emular diversos videogames retro!</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('adobe')">
+<span class="badge">Player</span>
+<h3>AdobeFlashPlayer</h3>
+<p>Aplicativo para jogar jogos flash.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('pcsx2')">
+<span class="badge">Emular</span>
+<h3>PCSX2</h3>
+<p>Aplicativo para emular um ps2!</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('ppsspp')">
+<span class="badge">Emular</span>
+<h3>PPSSPP - PC</h3>
+<p>Aplicativo para emular um ppsspp para pc!</p>
+</div>
+
+
+</div>
+</div>
+<div class="section" id="emular">
+<h2>🎲 Para emular
+<div class="grid">
+
+<div class="card" data-tag="tool" onclick="openModal('bob')">
+<span class="badge">RETROARCH</span>
+<h3>B.O.B</h3>
+<p>PC e CELULAR.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('godghost')">
+<span class="badge">PPSSPP</span>
+<h3>God Of War Ghost Of Sparta</h3>
+<p>PC e CELULAR.</p>
+</div>
+
+</div>
+</div>
 
 </main>
 
@@ -540,12 +605,75 @@ header p{
 </div>
 </div>
 
+<div id="modal-bob" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('bob')">×</span>
+<h2>B.O.B</h2>
+<p>Um jogo de plataforma no espaço. (Emulador recomendado: RetroArch)</p>
+<a class="btn" href="https://www.mediafire.com/file/tcoiwon717r0rov/B.O.B+GENSIS.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-nfsu" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('nfsu')">×</span>
+<h2>Need For Speed Underground</h2>
+<p>Um jogo de Corrida incrivel.</p>
+<a class="btn" href="https://mega.nz/file/615SnLTT#kjFRONG7GDVqs8QL3tG-nP-TB3MOQRXKew95XV4WjnM" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-cod1" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('cod1')">×</span>
+<h2>Call Of Duty 1</h2>
+<p>Um jogo de guerra que marcou o mundo.</p>
+<a class="btn" href="https://drive.google.com/file/d/1PuvhbAJzIwbRK6xLnxKhSxTCe4kWKwmD/view?usp=sharing" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-ppsspp" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('ppsspp')">×</span>
+<h2>DEUS DA GUERRA - FANTASMA DE SPARTA</h2>
+<p>O brutal jogo de ação e aventura.</p>
+<a class="btn" href="https://sto.romsfast.com/PSP-Complete/PSP-PSN/God%20of%20War%20-%20Ghost%20of%20Sparta%20(USA)%20(PSN).zip?token=cHdYalBmWU9FE3lqW3VYLFlWQhh4clx3VWE%3D" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-ppsspp" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('ppsspp')">×</span>
+<h2>PPSSPP</h2>
+<p>Emule o clássico videogame psp.</p>
+<a class="btn" href="https://www.ppsspp.org/files/1_19_3/ppsspp_win.zip" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-60seconds" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('60seconds')">×</span>
+<h2>60 Seconds MOBILE</h2>
+<p>O apocalipse começou, tente viver.</p>
+<a class="btn" href="https://www.mediafire.com/file/mzruxdd8vqeemz9/60+Seconds.apk/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
 <div id="modal-terraria" class="modal">
 <div class="modal-box">
 <span class="close" onclick="closeModal('terraria')">×</span>
 <h2>Terraria</h2>
 <p>Survival insano em 2d!</p>
 <a class="btn" href="https://www.mediafire.com/file/e41ktawjhoyi3jj/Terraria.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-RetroArch" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('RetroArch')">×</span>
+<h2>RetroArch</h2>
+<p>Emule diversos jogos retro!</p>
+<a class="btn" href="https://www.mediafire.com/file/0p0kd8gtsk16iin/RetroArch+(v1-22-2-0).zip/file" target="_blank">BAIXAR</a>
 </div>
 </div>
 
@@ -573,6 +701,15 @@ header p{
 <h2>Papa´s Collection PC</h2>
 <p>Uma série de jogos da franquia Papa´s Flash.</p>
 <a class="btn" href="https://www.mediafire.com/file/iuew4g2yerbcbiw/Papa%25C2%25B4s_Games_-_Collection_%2528PC%2529.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-alc" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('alc')">×</span>
+<h2>Alice Madness Returns</h2>
+<p> Alice Liddell, agora com 19 anos e vivendo em um orfanato em Londres, 11 anos após um incêndio matar sua família.</p>
+<a class="btn" href="https://mega.nz/file/b0p3kKTb#v3TJrrtCq2VGDJ0Uiyjxrp2Tge7nZ7mu49PF7tb9o5I" target="_blank">BAIXAR</a>
 </div>
 </div>
 
