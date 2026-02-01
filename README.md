@@ -1,5 +1,7 @@
 ENTER IN THE OFFICIAL SITE:
 https://speedzera.github.io/nexushopes/
+Or Here:
+https://nexushope.kwzinnn07.workers.dev/
 
 On this site, you'll find various downloads.
 Useful PC and Android games and apps, valuable information!
