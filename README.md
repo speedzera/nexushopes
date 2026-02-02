@@ -17,5 +17,6 @@ Updates:
 (new games)
 
 Outdated version of the website: https://speedzera.github.io/nexushopes/
-Do you want me to add a game or an app?
+
+Do you want me to add a game or an app? 
 Tell me: https://discord.gg/8G7TensUAp
