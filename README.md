@@ -1,7 +1,4 @@
-Enter in the official site:
-https://speedzera.github.io/nexushopes/
-
-Or Here:
+Current version of the website: 
 https://nexushope.kwzinnn07.workers.dev/
 
 ---------------------------------------------
@@ -19,6 +16,6 @@ Updates:
  
 (new games)
 
-
+Outdated version of the website: https://speedzera.github.io/nexushopes/
 Do you want me to add a game or an app?
 Tell me: https://discord.gg/8G7TensUAp
