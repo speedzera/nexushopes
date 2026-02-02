@@ -14,37 +14,9 @@ I always bring updates!
 -------------------------------------------
 
 Updates:
-Call of Juarez
 
-Battlefield 2
-
-Angry Birds
-
-Buckshot Roulette
-
-Cookie Clicker
-
-Counter-Strike 1.6
-
-Diablo
-
-Mortal Kombat Trilogy
-
-Pac-Man
-
-Red Ball Colections
-
-Sally Face
-
-Stardew Valley
-
-The True Ingredients
-
-The Walking Dead (Telltale) – Season 1
-
-There Is a Butcher Around
-
-Trollface Quest Colections
+ Call of Juarez, Battlefield 2, Angry Birds, Buckshot Roulette, Cookie Clicker, Counter-Strike 1.6, Diablo, Mortal Kombat Trilogy, Pac-Man, Red Ball Collections,  Sally Face, Stardew Valley, The True Ingredients, The Walking Dead (Telltale) – Season 1, There Is a Butcher Around, Trollface Quest Collections
+ 
 (new games)
 
 
