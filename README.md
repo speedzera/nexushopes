@@ -1,6 +1,9 @@
 Current version of the website: 
 https://nexushope.kwzinnn07.workers.dev/
 
+Opition 2:
+https://speedzera.github.io/nexushopes/
+
 ---------------------------------------------
 
 On this site, you'll find various downloads.
@@ -19,8 +22,6 @@ New Apps: Apps: Auto Clicker, AudaCity, Driver Boost, Launcher Legacy Minecraft 
 New area to HQs and Books.
 
 -------------------------------------------
-
-Outdated version of the website: https://speedzera.github.io/nexushopes/
 
 Do you want me to add a game or an app? 
 Tell me: https://discord.gg/8G7TensUAp
