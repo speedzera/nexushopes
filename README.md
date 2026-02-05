@@ -12,9 +12,13 @@ I always bring updates!
 
 Updates:
 
- Call of Juarez, Battlefield 2, Angry Birds, Buckshot Roulette, Cookie Clicker, Counter-Strike 1.6, Diablo, Mortal Kombat Trilogy, Pac-Man, Red Ball Collections,  Sally Face, Stardew Valley, The True Ingredients, The Walking Dead (Telltale) – Season 1, There Is a Butcher Around, Trollface Quest Collections
- 
-(new games)
+New Games: Carnivoros, Storyteller, Delta Force 2, Carmel Flash Games, American McGee's Alice
+
+New Apps: Apps: Auto Clicker, AudaCity, Driver Boost, Launcher Legacy Minecraft Java, 1.1.1 Warp, Format Factory
+
+New area to HQs and Books.
+
+-------------------------------------------
 
 Outdated version of the website: https://speedzera.github.io/nexushopes/
 
