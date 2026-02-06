@@ -1,4 +1,4 @@
-Current version of the website: 
+Oficial website
 https://nexushope.kwzinnn07.workers.dev/
 
 Opition 2:
@@ -15,11 +15,13 @@ I always bring updates!
 
 Updates:
 
-New Games: Carnivoros, Storyteller, Delta Force 2, Carmel Flash Games, American McGee's Alice
+New games, gta, cuphead, assassins creed, tony hawks etc...
 
-New Apps: Apps: Auto Clicker, AudaCity, Driver Boost, Launcher Legacy Minecraft Java, 1.1.1 Warp, Format Factory
+Order A-Z
 
-New area to HQs and Books.
+New tab discord link
+
+More things...
 
 -------------------------------------------
 
