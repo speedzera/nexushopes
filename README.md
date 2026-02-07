@@ -13,15 +13,7 @@ I always bring updates!
 
 -------------------------------------------
 
-Updates:
-
-New games, gta, cuphead, assassins creed, tony hawks etc...
-
-Order A-Z
-
-New tab discord link
-
-More things...
+Last updated: February 7, 2026
 
 -------------------------------------------
 
