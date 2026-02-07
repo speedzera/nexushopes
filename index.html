@@ -23,7 +23,7 @@
 
 body{
   font-family:Poppins, sans-serif;
-  background:radial-gradient(circle at top,#1a0000,#000);
+  background:radial-gradient(circle at top,#050505,#2b2b2b);
   color:var(--text);
   overflow-x:hidden;
 }
@@ -165,7 +165,7 @@ header p{
 .card:hover{
   transform:translateY(-10px) scale(1.02);
   border-color:var(--red);
-  box-shadow:0 0 20px rgba(255,0,0,.25);
+  box-shadow:0 0 20px rgb(122, 0, 0);
 }
 
 .card h3{
@@ -277,12 +277,14 @@ header p{
     <li><a href="#emuladores">🧰 Emuladores</a></li>
     <li><a href="#emular">📡Para Emular</a></li>
         <li><a href="#hqsl">📘Livros/HQs</a></li>
-   <p style="font-size: 15px;"><span style="color: rgb(238, 255, 0);">📞 DMCA: nexushope31@gmail.com</span></p>
-   <div></div>
-  </p>
-</p> --------------------
-  </p>
-    <p style="font-size: 15px;"><span style="color: rgb(72, 255, 0);">Todos jogos e apps foram pegos da internet, podendo conter algum tipo de malware. Baixe por sua conta e risco.</span></p>
+         <p style="font-size: 15px;"><span style="color: rgba(139, 143, 155, 0);">-
+   <p style="font-size: 15px;"><span style="color: rgb(154, 155, 139);">📞 DMCA: nexushope31@gmail.com</span></p>
+ <p style="font-size: 20px;"><span style="color: rgba(139, 143, 155, 0);">-
+    <p style="font-size: 15px;"><span style="color: rgb(119, 119, 119);">Todos jogos e apps foram pegos da internet, podendo conter algum tipo de malware. Baixe por sua conta e risco.</span></p>
+     <p style="font-size: 20px;"><span style="color: rgba(139, 143, 155, 0);">-     
+<p class="update" onclick="document.getElementById('modal-update').style.display='flex'">
+VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
+    </p>
   </ul>
 </nav>
 
@@ -301,7 +303,6 @@ header p{
   <div class="tag active" data-tag="all">Tudo</div>
   <div class="tag" data-tag="leve">Leves</div>
   <div class="tag" data-tag="pesado">Pesados</div>
-  <div class="tag" data-tag="tool">Ferramentas</div>
 </div>
 
 <!-- jogos -->
@@ -332,6 +333,12 @@ header p{
       <span class="badge">Luta</span>
       <h3>Animal Revolt Battle Simulator</h3>
       <p>Coloque animais a briga!</p>
+    </div>
+
+    <div class="card" data-tag="leve" onclick="openModal('balde')">
+      <span class="badge">OpenWorld</span>
+      <h3>Bully</h3>
+      <p>Faça uma zona na escola!</p>
     </div>
 
     <div class="card" data-tag="leve" onclick="openModal('balde')">
@@ -425,10 +432,29 @@ header p{
       <p>FPS com um mundo aberto insano.</p>
     </div>
 
+    <div class="card" data-tag="leve" onclick="openModal('fnaf1')">
+      <span class="badge">Horror</span>
+      <h3>Five Nights At Freddy 1</h3>
+      <p>SOBREVIVA A NOITE!</p>
+    </div>
+
+    <div class="card" data-tag="leve" onclick="openModal('fnaf2')">
+      <span class="badge">Horror</span>
+      <h3>Five Nights At Freddy 2</h3>
+      <p>SOBREVIVA A NOITE!</p>
+    </div>
+
+    <div class="card" data-tag="leve" onclick="openModal('fnaf3')">
+      <span class="badge">Horror</span>
+      <h3>Five Nights At Freddy 3</h3>
+      <p>SOBREVIVA A NOITE!</p>
+    </div>
+
+
     <div class="card" data-tag="leve" onclick="openModal('fnaf4')">
-      <span class="badge">Click</span>
+      <span class="badge">Horror</span>
       <h3>Five Nights At Freddy 4</h3>
-      <p>SOBREVIVA a 5 noites.</p>
+      <p>SOBREVIVA A NOITE!</p>
     </div>
 
     <div class="card" data-tag="leve" onclick="openModal('gtasan')">
@@ -460,6 +486,12 @@ header p{
       <span class="badge">Corrida</span>
       <h3>Need for Speed Underground</h3>
       <p>Faça corridas e ganhe reputação!</p>
+    </div>
+
+    <div class="card" data-tag="leve" onclick="openModal('portal')">
+      <span class="badge">Puzzle</span>
+      <h3>Portal</h3>
+      <p>Resolva puzzles!</p>
     </div>
 
     <div class="card" data-tag="leve" onclick="openModal('papapc')">
@@ -555,6 +587,12 @@ header p{
   <h2>🛠️ Ferramentas</h2>
   <div class="grid">
 
+    <div class="card" data-tag="tool" onclick="openModal('warp')">
+      <span class="badge">VPN</span>
+      <h3>1.1.1 VPN Warp</h3>
+      <p>Mude sua VPN do pc.</p>
+    </div>
+
     <div class="card" data-tag="tool" onclick="openModal('auci')">
       <span class="badge">Helper</span>
       <h3>AudaCity</h3>
@@ -609,6 +647,12 @@ header p{
       <p>O vizualizador de fotos mais leve e bom.</p>
     </div>
 
+    <div class="card" data-tag="leve" onclick="openModal('rufus')">
+      <span class="badge">Tool</span>
+      <h3>Rufus</h3>
+      <p>Faça seu pendrive bootável e etc.</p>
+    </div>
+
     <div class="card" data-tag="tool" onclick="openModal('boost')">
       <span class="badge">Booster</span>
       <h3>SoundBooster</h3>
@@ -631,12 +675,6 @@ header p{
       <span class="badge">PLAYER</span>
       <h3>VlC</h3>
       <p>O melhor vizualizador de video atualmente.</p>
-    </div>
-
-    <div class="card" data-tag="tool" onclick="openModal('warp')">
-      <span class="badge">VPN</span>
-      <h3>1.1.1 VPN Warp</h3>
-      <p>Mude sua VPN do pc.</p>
     </div>
 
     <div class="card" data-tag="tool" onclick="openModal('winrar')">
@@ -725,16 +763,16 @@ header p{
 <h2>🚜 Emuladores
 <div class="grid">
 
-<div class="card" data-tag="tool" onclick="openModal('RetroArch')">
-<span class="badge">Emular</span>
-<h3>RetroArch</h3>
-<p>Aplicativo para emular diversos videogames retro!</p>
-</div>
-
 <div class="card" data-tag="tool" onclick="openModal('adobe')">
 <span class="badge">Player</span>
 <h3>AdobeFlashPlayer</h3>
 <p>Aplicativo para jogar jogos flash.</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('RetroArch')">
+<span class="badge">Emular</span>
+<h3>RetroArch</h3>
+<p>Aplicativo para emular diversos videogames retro!</p>
 </div>
 
 <div class="card" data-tag="tool" onclick="openModal('pcsx2')">
@@ -747,6 +785,12 @@ header p{
 <span class="badge">Emular</span>
 <h3>PPSSPP - PC</h3>
 <p>Aplicativo para emular um ppsspp para pc!</p>
+</div>
+
+<div class="card" data-tag="tool" onclick="openModal('snes9x')">
+<span class="badge">Emular</span>
+<h3>Snes9x</h3>
+<p>Emulador do nintendo snes!</p>
 </div>
 
 
@@ -823,6 +867,78 @@ header p{
 <h2>Plants vs Zombies</h2>
 <p>Defenda sua casa contra zumbis.</p>
 <a class="btn" href="https://www.mediafire.com/file/vrewb4p7a3f1otx/Plantas+VS+Zombies+GOTY.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-snes9x" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('snes9x')">×</span>
+<h2>SNES9X</h2>
+<p>Jogue jogos de snes sem precisar extrai-los.</p>
+<a class="btn" href="https://www.mediafire.com/file/t8dgz09ahc4rtcq/snes9x.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-rufus" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('rufus')">×</span>
+<h2>Rufus</h2>
+<p>Boots, formatação e etc.</p>
+<a class="btn" href="https://github.com/pbatard/rufus/releases/download/v4.12/rufus-4.12_x86.exe" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-fnaf3" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('fnaf3')">×</span>
+<h2>FNAF 3</h2>
+<p>SOBREVIVA A NOITE! (usei o drive pois mediafire bloqueou.)</p>
+<a class="btn" href="https://drive.google.com/file/d/1mM17UTXrcgWXcqMe1eNgBLlnu_S9QKyP/view?usp=sharing">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-fnaf2" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('fnaf2')">×</span>
+<h2>FNAF 2</h2>
+<p>SOBREVIVA A NOITE! (usei o drive pois mediafire bloqueou.)</p>
+<a class="btn" href="https:https://drive.google.com/file/d/1VsKquQrbEHuljG-p9XU0DOqO0tYmtc7X/view?usp=drive_link" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-fnaf1" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('fnaf1')">×</span>
+<h2>FNAF 1</h2>
+<p>SOBREVIVA A NOITE! (ignore o aviso de malware do mediafire)</p>
+<a class="btn" href="https://www.mediafire.com/file/ndsor58ffdqwvqz/Five_Nights_at_Freddys_1.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-bully" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('bully')">×</span>
+<h2>Bully Scholarship Edition</h2>
+<p>Faça uma zona na escola.</p>
+<a class="btn" href="https://www.mediafire.com/file/3gqqbuhz5iaq3uc/Bully+Scholarship+Edition.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-bully" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('bully')">×</span>
+<h2>Bully Scholarship Edition</h2>
+<p>Faça uma zona na escola.</p>
+<a class="btn" href="https://www.mediafire.com/file/3gqqbuhz5iaq3uc/Bully+Scholarship+Edition.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-portal" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('portal')">×</span>
+<h2>Portal</h2>
+<p>Consiga a famosa portal gun!</p>
+<a class="btn" href="https://www.mediafire.com/file/z8yulq1zmkpwwhj/Portal.zip/file" target="_blank">BAIXAR</a>
 </div>
 </div>
 
@@ -1493,6 +1609,21 @@ header p{
 <a class="btn" href="https://www.mediafire.com/file/qnpflr1dmhy977k/NO+ADs+ANDROID.zip/file" target="_blank">BAIXAR</a>
 </div>
 </div>
+
+<div id="modal-update" class="modal">
+  <div class="modal-box">
+    <span class="close" onclick="document.getElementById('modal-update').style.display='none'">×</span>
+    <h2>Última Atualização - 07/02/2026</h2>
+    <p style="margin:15px 0;">Novidades dessa versão: (V0.8)</p>
+    <ul style="text-align:left; padding-left:20px; color:#ccc;">
+      <li>Novos jogos: Portal, Bully, Fnaf1, Fnaf2 e Fnaf3.</li>
+      <li>Nova ferramenta: Rufus</li>
+      <li>Atualização geral no site, ui, mudanças reparos e etc.</li>
+    </ul>
+    <button class="btn" onclick="document.getElementById('modal-update').style.display='none'">Fechar</button>
+  </div>
+</div>
+
 
 <div style="text-align:center; margin: 40px 0; padding: 25px; background: #0f0000; border-top: 5px solid #ff0000; border-bottom: 5px solid #ff0000;">
   <h3 style="color: #ff4444; font-family: Orbitron; font-size: 1.8rem; margin-bottom: 15px;">
