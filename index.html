@@ -6,6 +6,7 @@
 <title>NexusHope | Download Center</title>
 <link rel="icon" href="logo.png">
 
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
@@ -101,6 +102,36 @@ header p{
   color:white;
   outline:none;
   transition:.2s;
+}
+
+/*-PARTE UPDATEEEEEEE-->*/
+
+.update {
+  position: sticky;
+  bottom: 20px;               /* distância do fundo */
+  background: rgba(255, 0, 0, 0.15);
+  padding: 12px 15px;
+  margin: 30px 0 20px 0;
+  border-radius: 12px;
+  border: 1px solid var(--red);
+  text-align: center;
+  font-weight: bold;
+  color: #ffaaaa;
+  cursor: pointer;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+}
+
+.update:hover {
+  background: rgba(255, 0, 0, 0.35);
+  color: white;
+}
+
+/*-PARTE UPDATEEEEEEE-->*/
+
+.update:hover {
+  background: rgba(255, 0, 0, 0.35);
+  color: white;
 }
 
 .search input:focus{
@@ -269,29 +300,32 @@ header p{
 
 <nav>
   <div class="logo">Nexus<span>Hope</span></div>
-  <ul>
+
+  <ul class="menu">
     <li><a href="#jogos">🎮 Jogos</a></li>
     <li><a href="#ferramentas">🛠️ Ferramentas</a></li>
-    <li><a href="#mobile">📱 Mobile</a></li>
-        <li><a href="#extras">💾 Extras</a></li>
+    <li><a href="#celulargames">📱 Jogos/Celular</a></li>
+    <li><a href="#celularapps">🪀 Apps/Celular</a></li>
+    <li><a href="#extras">💾 Extras</a></li>
     <li><a href="#emuladores">🧰 Emuladores</a></li>
-    <li><a href="#emular">📡Para Emular</a></li>
-        <li><a href="#hqsl">📘Livros/HQs</a></li>
-         <p style="font-size: 15px;"><span style="color: rgba(139, 143, 155, 0);">-
-   <p style="font-size: 15px;"><span style="color: rgb(154, 155, 139);">📞 DMCA: nexushope31@gmail.com</span></p>
- <p style="font-size: 20px;"><span style="color: rgba(139, 143, 155, 0);">-
-    <p style="font-size: 15px;"><span style="color: rgb(119, 119, 119);">Todos jogos e apps foram pegos da internet, podendo conter algum tipo de malware. Baixe por sua conta e risco.</span></p>
-     <p style="font-size: 20px;"><span style="color: rgba(139, 143, 155, 0);">-     
-<p class="update" onclick="document.getElementById('modal-update').style.display='flex'">
-VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
-    </p>
+    <li><a href="#emular">📡 Para Emular</a></li>
+    <li><a href="#hqsl">📘 Livros/HQs</a></li>
   </ul>
+
+  <div class="nav-info">
+    <p class="dmca">📞 DMCA: nexushope31@gmail.com</p>
+    <p class="aviso"><p style="font-size: 15px;"><span style="color: rgb(119, 119, 119);">Todos jogos e apps foram pegos da internet, podendo conter algum tipo de malware. Baixe por sua conta e risco.</span></p> <p style="font-size: 10px;"><span style="color: rgba(139, 143, 155, 0);">-Apps e jogos foram obtidos da internet. Baixe por sua conta e risco.</p>
+  </div>
+
+  <p class="update" onclick="document.getElementById('modal-update').style.display='flex'">
+    Último update
+  </p>
 </nav>
 
 <main>
 
 <header>
-  <h1>NEXUSHOPE</h1>
+<div class="logo">Nexus<span>Hope</span></div>
   <p>Central De Downloads.</p>
 </header>
 
@@ -335,6 +369,12 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
       <p>Coloque animais a briga!</p>
     </div>
 
+    <div class="card" data-tag="pesado" onclick="openModal('acrd')">
+      <span class="badge">Plataforma</span>
+      <h3>Assassin´s Creed: DC</h3>
+      <p>Um dos melhores assassin´s creeds.</p>
+    </div>
+
     <div class="card" data-tag="leve" onclick="openModal('bully')">
       <span class="badge">OpenWorld</span>
       <h3>Bully</h3>
@@ -353,6 +393,12 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
       <p>FPS com tiro, porrada e bomba.</p>
     </div>
 
+    <div class="card" data-tag="pesado" onclick="openModal('bf6')">
+      <span class="badge">FPS</span>
+      <h3>Battle Field 6</h3>
+      <p>Acabe com inimigos em um FPS insano!</p>
+    </div>
+    
     <div class="card" data-tag="leve" onclick="openModal('br')">
       <span class="badge">Inscryption</span>
       <h3>Buckshot Roulette</h3>
@@ -389,6 +435,12 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
       <p>FPS de guerra.</p>
     </div>
 
+    <div class="card" data-tag="leve" onclick="openModal('codmw1')">
+      <span class="badge">FPS</span>
+      <h3>COD 4: Modern Warfare</h3>
+      <p>A guerra nos dias de hoje.</p>
+    </div>
+
     <div class="card" data-tag="leve" onclick="openModal('coj')">
       <span class="badge">FPS</span>
       <h3>Call of Juarez GunsLiger</h3>
@@ -419,6 +471,11 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
       <p>Guerras.</p>
     </div>
 
+        <div class="card" data-tag="pesado" onclick="openModal('daygone')">
+      <span class="badge">FPS 1998</span>
+      <h3>Days Gone</h3>
+      <p>Sobrevivência pós-apocalíptica.</p>
+    </div>
 
     <div class="card" data-tag="leve" onclick="openModal('farcry')">
       <span class="badge">FPS</span>
@@ -457,12 +514,36 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
       <p>SOBREVIVA A NOITE!</p>
     </div>
 
+    <div class="card" data-tag="leve" onclick="openModal('fl')">
+      <span class="badge">Puzzle</span>
+      <h3>FireBoy and LavaGirl</h3>
+      <p>Resolvam puzzles juntos.</p>
+    </div>
+
+    <div class="card" data-tag="pesado" onclick="openModal('gow2018')">
+      <span class="badge">Aventura</span>
+      <h3>God Of War: 2018</h3>
+      <p>Retenção pós Olympus.</p>
+    </div>
+
     <div class="card" data-tag="leve" onclick="openModal('gtasan')">
       <span class="badge">OPENWORLD</span>
       <h3>GTA San Andreas</h3>
       <p>Mundo aberto insano.</p>
     </div>
 
+    <div class="card" data-tag="pesado" onclick="openModal('gtav')">
+      <span class="badge">OpenWorld</span>
+      <h3>Grand Theft Auto V</h3>
+      <p>Um mundo aberto insano com missões.</p>
+    </div>
+
+    <div class="card" data-tag="leve" onclick="openModal('hws')">
+      <span class="badge">Plataforma</span>
+      <h3>Happy Wheels</h3>
+      <p>O clássico brutal.</p>
+    </div>
+    
     <div class="card" data-tag="leve" onclick="openModal('legacy')">
       <span class="badge">Aventura</span>
       <h3>Minecraft Java</h3>
@@ -475,6 +556,11 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
       <p>O insano MKT leve.</p>
     </div>
 
+    <div class="card" data-tag="leve" onclick="openModal('mad')">
+      <span class="badge">Plataforma3d</span>
+      <h3>Madagascar</h3>
+      <p>Continuação direta do filme.</p>
+    </div>
 
     <div class="card" data-tag="leve" onclick="openModal('nfs')">
       <span class="badge">CORRIDA</span>
@@ -484,7 +570,7 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
 
     <div class="card" data-tag="leve" onclick="openModal('nfsu')">
       <span class="badge">Corrida</span>
-      <h3>Need for Speed Underground</h3>
+      <h3>Need for Speed Underground 2</h3>
       <p>Faça corridas e ganhe reputação!</p>
     </div>
 
@@ -566,6 +652,12 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
       <p>Coleção dos troll face quests.</p>
     </div>
 
+    <div class="card" data-tag="leve" onclick="openModal('uno')">
+      <span class="badge">Puzzle</span>
+      <h3>Uno</h3>
+      <p>O clássico jogo de cartas.</p>
+    </div>
+
     <div class="card" data-tag="leve" onclick="openModal('undertale')">
       <span class="badge">BulletHell</span>
       <h3>Undertale</h3>
@@ -576,6 +668,12 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
       <span class="badge">SANDBOX</span>
       <h3>WorldBox</h3>
       <p>Simulador de deus.</p>
+    </div>
+
+    <div class="card" data-tag="pesado" onclick="openModal('171')">
+      <span class="badge">OpenWorld</span>
+      <h3>171</h3>
+      <p>O famoso GTA brasileiro.</p>
     </div>
 
   </div>
@@ -692,10 +790,10 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
   </div>
 </div>
 
-<div class="section" id="mobile">
-<h2>📱 Mobile</h2>
+<div class="section" id="celulargames">
+<h2>📱 Jogos/Celular</h2>
 <div class="grid">
-
+  
 <div class="card" data-tag="leve" onclick="openModal('cph')">
 <span class="badge">Jogo</span>
 <h3>CupHead</h3>
@@ -714,10 +812,63 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
 <p>Pack da série Papa´s!</p>
 </div>
 
+<div class="card" data-tag="leve" onclick="openModal('und')">
+<span class="badge">Jogo</span>
+<h3>Undertale</h3>
+<p>RPG clássico para celular.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('pojav')">
+<span class="badge">Launcher</span>
+<h3>Minecraft Java</h3>
+<p>Com o pojavlauncher você joga minecraft java no celular!</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('hollow')">
+<span class="badge">Jogo</span>
+<h3>Hollow Knight Silksong</h3>
+<p>Continuação do Hollow.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('second')">
+<span class="badge">Jogo</span>
+<h3>Second Kick</h3>
+<p>Second kick com dinheiro e gemas infinitas.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('narut')">
+<span class="badge">Jogo</span>
+<h3>Naruto Senki</h3>
+<p>Naruto senki com todos personagens desbloquados.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('sixg')">
+<span class="badge">Installer</span>
+<h3>Six Guns</h3>
+<p>Velho oeste com dinheiro infinito.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('gt')">
+<span class="badge">Jogo</span>
+<h3>Gta San Andreas</h3>
+<p>APK do gta san mobile.</p>
+</div>
+
+</div>
+<div class="section" id="celularapps">
+<h2>🪀 Apps/Celular</h2>
+<div class="grid">
+
 <div class="card" data-tag="leve" onclick="openModal('pstouch')">
 <span class="badge">Photoshop</span>
-<h3>PS Touch</h3>
-<p>Editor de fotos mobile, completo na sua melhor versão.</p>
+<h3>Photoshop Touch</h3>
+<p>(PS Touch)Editor de fotos mobile, completo na sua melhor versão.</p>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('smarplay')">
+<span class="badge">Play</span>
+<h3>Smartplay+</h3>
+<p>Assista séries, filmes e desenhos.</p>
 </div>
 
 <div class="card" data-tag="leve" onclick="openModal('powerdirector')">
@@ -725,11 +876,6 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
 <h3>PowerDirector</h3>
 <p>Editor de vídeo completo!</p>
 </div>
-
-<div class="card" data-tag="pesados" onclick="openModal('capo')">
-<span class="badge">Editor</span>
-<h3>CapCut</h3>
-<p>Editor de vídeo.</p>
 </div>
 
 </div>
@@ -991,7 +1137,7 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
 <div id="modal-nfsu" class="modal">
 <div class="modal-box">
 <span class="close" onclick="closeModal('nfsu')">×</span>
-<h2>Need For Speed Underground</h2>
+<h2>Need For Speed Underground 2</h2>
 <p>Um jogo de Corrida incrivel.</p>
 <a class="btn" href="https://mega.nz/file/615SnLTT#kjFRONG7GDVqs8QL3tG-nP-TB3MOQRXKew95XV4WjnM" target="_blank">BAIXAR</a>
 </div>
@@ -1078,12 +1224,185 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
 </div>
 </div>
 
+<div id="modal-gtav" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('gtav')">×</span>
+<h2>GTA V</h2>
+<p>Simplesmente um dos melhores jogos do mundo!</p>
+<a class="btn" href="https://buzzheavier.com/rkksxkwu6kef" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-codmw1" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('codmw1')">×</span>
+<h2>Call of Duty 4: Modern Warfare</h2>
+<p>A guerra, só que desta vez nos tempos atuais.</p>
+<a class="btn" href="https://gofile.io/d/rpeZ8y" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-fl" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('fl')">×</span>
+<h2>FireBoy and LavaGirl</h2>
+<p>Resolvam puzzles com seu amigo(a)!</p>
+<a class="btn" href="https://www.mediafire.com/file/ppycfkictstv9a8" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-hws" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('hws')">×</span>
+<h2>Happy Wheels</h2>
+<p>O clássico joguinho brutal.</p>
+<a class="btn" href="https://www.mediafire.com/file/lqymeiy6y1a8ikl" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-uno" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('uno')">×</span>
+<h2>UNO</h2>
+<p>O clássico Uno só que desta vez para PC!</p>
+<a class="btn" href="https://www.mediafire.com/file/v5yuz847v0v7o31/UNO.Build.9377745.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+
+<div id="modal-acrd" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('acrd')">×</span>
+<h2>Assassin's Creed™: Director's Cut Edition</h2>
+<p>Baixe primeiro o "Free download manager" e depois instale esse arquivo torrent para baixar o jogo.</p>
+<a class="btn" href="https://www.mediafire.com/file/4jexa76q607py7i/Assassin%27s+Creed+2008+GOG.torrent/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-mad" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('mad')">×</span>
+<h2>Madagascar</h2>
+<p>O jogo Madagascar (2005), desenvolvido pela Toys for Bob e publicado pela Activision, é um jogo de plataforma 3D baseado no filme da DreamWorks. A trama segue Alex (leão), Marty (zebra), Glória (hipopótamo) e Melman (girafa) fugindo do zoológico de Nova York e chegando à ilha de Madagascar, enfrentando desafios e lêmures.  </p>
+<a class="btn" href="https://www.mediafire.com/file/dyc9nh2m9y0zcvn/Madagascar_Win_Files_EN.rar/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-171" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('171')">×</span>
+<h2>171</h2>
+<p>171 é um jogo de ação e aventura em mundo aberto, desenvolvido pela brasileira Betagames Group, focado na vida de Nicolau Souza, um morador de comunidade que tenta viver honestamente, mas é forçado a entrar no submundo do crime devido ao envolvimento de seu irmão, Rogério, com facções perigosas. O jogo se passa em Paulistânia, uma cidade fictícia inspirada em São Paulo, e tem lançamento final previsto para 2026. </p>
+<a class="btn" href="//koyso.com/game/1798" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-bf6" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('bf6')">×</span>
+<h2>BattleFild 6</h2>
+<p>Battlefield 6 (2025) apresenta uma campanha focada na narrativa ambientada entre 2027 e 2028, focando no conflito entre uma OTAN enfraquecida e a Pax Armata, uma corporação militar privada que busca dominar o poder global. O jogador assume o papel da unidade de elite Dagger 1-3 (ou Dagger 13) dos fuzileiros navais, combatendo em cenários globais como Gibraltar e Nova York. </p>
+<a class="btn" href="https://koyso.com/game/2244" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-daygone" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('daygone')">×</span>
+<h2>Days Gone</h2>
+<p>Days Gone é um jogo de ação em mundo aberto situado no Oregon pós-apocalíptico, dois anos após uma pandemia global transformar a humanidade em criaturas canibais ("Frenéticos"). O jogador controla Deacon St. John, um motoqueiro e caçador de recompensas que busca respostas sobre o possível paradeiro de sua esposa, Sarah, dada como morta.</p>
+<a class="btn" href="https://koyso.com/game/300" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-gow2018" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('gow2018')">×</span>
+<h2>God Of War: 2018</h2>
+<p>God of War (2018) segue Kratos, o ex-deus grego da guerra, vivendo no mundo nórdico de Midgard com seu filho, Atreus, após a morte de sua esposa, Faye. A missão principal é cumprir o último desejo de Faye: espalhar suas cinzas no pico mais alto de todos os reinos. Esta jornada transforma o relacionamento entre o pai relutante e seu filho, enfrentando monstros e deuses. </p>
+<a class="btn" href="https://koyso.com/game/69" target="_blank">BAIXAR</a>
+</div>
+</div>
+
 <div id="modal-alc" class="modal">
 <div class="modal-box">
 <span class="close" onclick="closeModal('alc')">×</span>
 <h2>Alice Madness Returns</h2>
 <p> Alice Liddell, agora com 19 anos e vivendo em um orfanato em Londres, 11 anos após um incêndio matar sua família.</p>
 <a class="btn" href="https://mega.nz/file/b0p3kKTb#v3TJrrtCq2VGDJ0Uiyjxrp2Tge7nZ7mu49PF7tb9o5I" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-hollow" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('hollow')">×</span>
+<h2>Hollow Knight Silksong mobile</h2>
+<p>Hollow Knight: Silksong é a aguardada sequência do aclamado jogo indie de ação e aventura estilo Metroidvania, Hollow Knight, onde os jogadores controlam a personagem Hornet em uma nova jornada por um reino desconhecido chamado Pharloom, explorando, combatendo mais de 150 inimigos, descobrindo novos poderes e desvendando mistérios, sendo lançado em setembro de 2025 para diversas plataformas e recebendo aclamação da crítica por sua arte, música e jogabilidade.</p>
+<a class="btn" href="https://download2390.mediafire.com/k12p342c8x7gwTZ5TUVmOCGx8qgncNzl1f1FnmsOb3FAME5sAWP1h71RKgnKPSYXGzsOD3CO7vv8EnxPxM-d6IVq8mjbjF_65P3-rF3lnmuR9-aHj5dv-QqBzS6GT0wxQEdj6AV3Z68TQqIf4DyUQ0fgEXOGsBAKIDM3x4Ft_N_vDDQ/9klgapg7aakp2j8/Hollow+Knight+Silksong+-+v1.0-Beta+10%5BFreddy%5C%27s%5D_Tekmods.com.apk" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-smarplay" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('smartplay')">×</span>
+<h2>Smartplat+</h2>
+<p>Assista series, filmes etc gratuitamente. Mas lembre-se de remover os anuncios seguindo os passos a seguir.</p>
+<a class="btn" href="https://download2393.mediafire.com/14i3okx2umjgdODylTx2IwEUPmHymhzFc5sxTGZ4PiqBWDjDWIEaOiVuYj-qf6TcZ_5HTeOLex-T0chr4RuFuX4m44M9miIK2sqZPTW8hORyn_pHpJMN-MR4IwSfTE1EIZzebbpJRyT1GpWlCn96IPms_mkw2w7Zane36C38C_h-jRA/j1zenw2pwkbgg7a/smart-play-1.16.apk" target="_blank">BAIXAR</a>
+<a class="btn" href="https://www.mediafire.com/file/qnpflr1dmhy977k/NO_ADs_ANDROID.zip/file" target="_blank">REMOVER ANÚNCIOS</a>
+</div>
+</div>
+
+<div id="modal-second" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('second')">×</span>
+<h2>Second Kick</h2>
+<p>Em Kick the Buddy: Second Kick, você está livre para cometer as mais terríveis maldades com um boneco irônico e muito marrento. Quanto mais maldades, mais dinheiro para comprar novos artefatos de tortura. Com dinheiro infinito. </p>
+<a class="btn" href="https://cdn446.onehost.io/2023/Kick_The_Buddy_Second_Kick_1.14.1523_1765313840_latestmodapks.com.apk" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-narut" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('narut')">×</span>
+<h2>Naruto Senki</h2>
+<p>Naruto Senki é um popular jogo de luta e estratégia 2D para Android (mobile), no estilo "fan game" (criado por fãs) ou MOBA (Multiplayer Online Battle Arena) simples, onde o objetivo principal é destruir a torre do adversário enquanto defende a sua. Focado em batalhas rápidas, o jogo permite controlar diversos personagens do anime com técnicas especiais únicas. </p>
+<a class="btn" href="https://cdn700.onehost.io/2023/NSV2_2.1.6-fix_1712913022_latestmodapks.com.apk" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-sixg" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('sixg')">×</span>
+<h2>SixGuns</h2>
+<p>Six-Guns é um jogo de ação e aventura em terceira pessoa, de mundo aberto, ambientado no Velho Oeste com elementos sobrenaturais, desenvolvido pela Gameloft. O jogador assume o papel de Buck Crosshaw, um foragido que explora Arizona e Oregon, lutando contra bandidos, vampiros e criaturas antigas, completando missões e aprimorando equipamentos. </p>
+<a class="btn" href="https://cdn446.onehost.io/2023/[Installer]_Six_Guns_1.0_1763303920_latestmodapks.com.apk" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-gt" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('gt')">×</span>
+<h2>GTA SAN ANDREAS</h2>
+<p>Em breve lançarei para todos despositivos. (android 8,9,10,11,12,13,14,15...)</p>
+<a class="btn" href="https://file.gtsamod.com/grand-theft-auto-san-andreas-v2.11.311-mod.apk" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-pojav" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('pojav')">×</span>
+<h2>PojavLauncher</h2>
+<p>Já imaginou jogar minecraft java sem ter pc? Faça isso direto do seu celular.</p>
+<a class="btn" href="https://github.com/PojavLauncherTeam/PojavLauncher/releases/download/gladiolus/PojavLauncher.apk" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-und" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('und')">×</span>
+<h2>Undetale</h2>
+<p>Divirta-se.</p>
+<a class="btn" href="https://apkdownloader.cc/storage/files/2025/05/undertale.apk.v2.0.1.apk" target="_blank">BAIXAR</a>
 </div>
 </div>
 
@@ -1613,12 +1932,12 @@ VEJA O ÚLTIMO UPDATE CLICANDO AQUI!
 <div id="modal-update" class="modal">
   <div class="modal-box">
     <span class="close" onclick="document.getElementById('modal-update').style.display='none'">×</span>
-    <h2>Última Atualização - 07/02/2026</h2>
-    <p style="margin:15px 0;">Novidades dessa versão: (V0.8)</p>
+    <h2>Última Atualização - 08/02/2026</h2>
+    <p style="margin:15px 0;">Novidades dessa versão: (V0.9)</p>
     <ul style="text-align:left; padding-left:20px; color:#ccc;">
-      <li>Novos jogos: Portal, Bully, Fnaf1, Fnaf2 e Fnaf3.</li>
-      <li>Nova ferramenta: Rufus</li>
-      <li>Atualização geral no site, ui, mudanças reparos e etc.</li>
+      <li>Novos jogos PC: God of War 2018, Days Gone, Battlefield 6, 171, Madagascar, Assassin’s Creed 2008, UNO, Happy Wheels, Fireboy and Lavagirl, Call of Duty MW1, GTA V.</li>
+      <li>Novo app/jogo mobile: Undertale, PojavLauncher, GTA SAN, SixGuns, Naruto Senki, Second Kick, Smartplay+, Hollow Knight Silksong.</li>
+      <li>Atualização geral: Mudanças de UI.</li>
     </ul>
     <button class="btn" onclick="document.getElementById('modal-update').style.display='none'">Fechar</button>
   </div>
@@ -1676,3 +1995,5 @@ document.querySelectorAll(".tag").forEach(tag=>{
 
 </body>
 </html>
+
+
