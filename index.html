@@ -24,7 +24,7 @@
 
 body{
   font-family:Poppins, sans-serif;
-  background:radial-gradient(circle at top,#050505,#2b2b2b);
+  background:radial-gradient(circle at top,#000000,#00031f);
   color:var(--text);
   overflow-x:hidden;
 }
@@ -34,7 +34,7 @@ nav{
   position:fixed;
   top:0;left:0;
   width:240px;height:100vh;
-  background:linear-gradient(180deg,#000,#080808);
+  background:linear-gradient(180deg,#000000,#080808);
   border-right:1px solid #1a1a1a;
   padding:25px;
 }
@@ -231,7 +231,7 @@ header p{
 }
 
 .modal-box{
-  background:linear-gradient(180deg,#14141f,#07070d);
+  background:linear-gradient(180deg,#090913,#07070d);
   border:1px solid var(--red);
   border-radius:20px;
   padding:35px;
@@ -441,10 +441,28 @@ header p{
       <p>A guerra nos dias de hoje.</p>
     </div>
 
+        <div class="card" data-tag="leve" onclick="openModal('codmw2')">
+      <span class="badge">FPS</span>
+      <h3>COD: Modern Warfare 2</h3>
+      <p>Continuação do MW1, mas agora com outras ameaças!</p>
+    </div>
+
+        <div class="card" data-tag="leve" onclick="openModal('codmw3')">
+      <span class="badge">FPS</span>
+      <h3>COD: Modern Warfare 3</h3>
+      <p>Continuação pós toda desgraça do MW2!</p>
+    </div>
+
     <div class="card" data-tag="leve" onclick="openModal('coj')">
       <span class="badge">FPS</span>
       <h3>Call of Juarez GunsLiger</h3>
       <p>FPS arcade do velho oeste.</p>
+    </div>
+
+    <div class="card" data-tag="leve" onclick="openModal('crazytaxi')">
+      <span class="badge">OpenWorld</span>
+      <h3>Crazy Taxi</h3>
+      <p>Um clássico!</p>
     </div>
 
     <div class="card" data-tag="leve" onclick="openModal('db')">
@@ -536,6 +554,12 @@ header p{
       <span class="badge">OpenWorld</span>
       <h3>Grand Theft Auto V</h3>
       <p>Um mundo aberto insano com missões.</p>
+    </div>
+
+    <div class="card" data-tag="leve" onclick="openModal('grannypc')">
+      <span class="badge">Puzzle</span>
+      <h3>Granny</h3>
+      <p>Um porte de granny para pc!</p>
     </div>
 
     <div class="card" data-tag="leve" onclick="openModal('hws')">
@@ -670,6 +694,12 @@ header p{
       <p>Simulador de deus.</p>
     </div>
 
+    <div class="card" data-tag="leve" onclick="openModal('win7g')">
+      <span class="badge">Win7</span>
+      <h3>Windows 7 Games</h3>
+      <p>Jogue os clássicos jogos do windows 7!</p>
+    </div>
+
     <div class="card" data-tag="pesado" onclick="openModal('171')">
       <span class="badge">OpenWorld</span>
       <h3>171</h3>
@@ -794,6 +824,12 @@ header p{
 <h2>📱 Jogos/Celular</h2>
 <div class="grid">
   
+<div class="card" data-tag="leve" onclick="openModal('bullyan')">
+<span class="badge">Jogo</span>
+<h3>Bully</h3>
+<p>Zaralho total na escola!</p>
+</div>
+
 <div class="card" data-tag="leve" onclick="openModal('cph')">
 <span class="badge">Jogo</span>
 <h3>CupHead</h3>
@@ -875,6 +911,13 @@ header p{
 <span class="badge">Editor</span>
 <h3>PowerDirector</h3>
 <p>Editor de vídeo completo!</p>
+</div>
+</div>
+
+<div class="card" data-tag="leve" onclick="openModal('octopus')">
+<span class="badge">MAPPING</span>
+<h3>Octopus</h3>
+<p>Mapeador de TEC/MOU para celular!</p>
 </div>
 </div>
 
@@ -1049,6 +1092,15 @@ header p{
 <h2>FNAF 2</h2>
 <p>SOBREVIVA A NOITE! (usei o drive pois mediafire bloqueou.)</p>
 <a class="btn" href="https:https://drive.google.com/file/d/1VsKquQrbEHuljG-p9XU0DOqO0tYmtc7X/view?usp=drive_link" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-crazytaxi" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('crazytaxi')">×</span>
+<h2>Crazy Taxi</h2>
+<p>O mundo aberto do taxista maluco!</p>
+<a class="btn" href="https://www.mediafire.com/file/rki1fl88mx8pcy2/Crazy_Taxi.zip/file" target="_blank">BAIXAR</a>
 </div>
 </div>
 
@@ -1279,6 +1331,15 @@ header p{
 </div>
 </div>
 
+<div id="modal-grannypc" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('grannypc')">×</span>
+<h2>Granny PC</h2>
+<p>Jogue o clássico Granny no seu pc!</p>
+<a class="btn" href="https://www.mediafire.com/file/698wowh0e890ufg/Granny.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
 <div id="modal-mad" class="modal">
 <div class="modal-box">
 <span class="close" onclick="closeModal('mad')">×</span>
@@ -1315,6 +1376,16 @@ header p{
 </div>
 </div>
 
+<div id="modal-octopus" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('octopus)">×</span>
+<h2>Octopus</h2>
+<p>Mapeie o seu teclado e mouse para jogar direto do celular!</p>
+<a class="btn" href="https://cdn901.onehost.io/2023/Octopus_7.2.8_1715372869_latestmodapks.com.apk" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+
 <div id="modal-gow2018" class="modal">
 <div class="modal-box">
 <span class="close" onclick="closeModal('gow2018')">×</span>
@@ -1348,7 +1419,7 @@ header p{
 <h2>Smartplat+</h2>
 <p>Assista series, filmes etc gratuitamente. Mas lembre-se de remover os anuncios seguindo os passos a seguir.</p>
 <a class="btn" href="https://download2393.mediafire.com/14i3okx2umjgdODylTx2IwEUPmHymhzFc5sxTGZ4PiqBWDjDWIEaOiVuYj-qf6TcZ_5HTeOLex-T0chr4RuFuX4m44M9miIK2sqZPTW8hORyn_pHpJMN-MR4IwSfTE1EIZzebbpJRyT1GpWlCn96IPms_mkw2w7Zane36C38C_h-jRA/j1zenw2pwkbgg7a/smart-play-1.16.apk" target="_blank">BAIXAR</a>
-<a class="btn" href="https://www.mediafire.com/file/qnpflr1dmhy977k/NO_ADs_ANDROID.zip/file" target="_blank">REMOVER ANÚNCIOS</a>
+<a class="btn" href="https://noadsandroid.blogspot.com/2026/02/portugues-agora-irei-te-mostrar-o-passo.html" target="_blank">REMOVER ANÚNCIOS</a>
 </div>
 </div>
 
@@ -1397,6 +1468,15 @@ header p{
 </div>
 </div>
 
+<div id="modal-win7g" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('win7g')">×</span>
+<h2>Windows 7 Games</h2>
+<p>Lembra dos clássicos jogos de windows 7? Rejogue todos eles!</p>
+<a class="btn" href="https://www.mediafire.com/file/woteuzbdsro40fw/Windows7Games_para_Windows_11_10_8.exe/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
 <div id="modal-und" class="modal">
 <div class="modal-box">
 <span class="close" onclick="closeModal('und')">×</span>
@@ -1424,6 +1504,15 @@ header p{
 </div>
 </div>
 
+<div id="modal-bullyan" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('bullyan')">×</span>
+<h2>Bully</h2>
+<p>Faça a maior desgraça na escola!</p>
+<a class="btn" href="https://cdn903.onehost.io/2023/Bully_Anniversary_Edition_1.4.311_1769156485_latestmodapks.com.apk" target="_blank">BAIXAR</a>
+</div>
+</div>
+
 <div id="modal-doom1" class="modal">
 <div class="modal-box">
 <span class="close" onclick="closeModal('doom1')">×</span>
@@ -1439,6 +1528,26 @@ header p{
 <h2>DOOM 2</h2>
 <p>Mate os tinhoso em marte!</p>
 <a class="btn" href="https://www.mediafire.com/file/jcjeuu1e58dtz0d/Doom_2.zip/file" target="_blank">BAIXAR</a>
+</div>
+</div>
+
+<div id="modal-codmw3" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('codmw3')">×</span>
+<h2>CALL OF DUTY MODERN WARFARE 3</h2>
+<p>Ultimo jogo da franquia MW, jogue depois da desgraça que aconteceu no MW2! (BAIXE O FDM PARA BAIXAR TORRENTS RÁPIDOS!)</p>
+<a class="btn" href="https://www.mediafire.com/file/supc4f6ahh6ck7m/Call_of_Duty_Modern_Warfare_3_%2528v1.9.461_%252B_DLCs%2529_-_%255BDODI_Repack%255D.torrent/file" target="_blank">BAIXAR</a>
+<a class="btn" href="https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe" target="_blank">FDM</a>
+</div>
+</div>
+
+<div id="modal-codmw2" class="modal">
+<div class="modal-box">
+<span class="close" onclick="closeModal('codmw2')">×</span>
+<h2>CALL OF DUTY MODERN WARFARE 2</h2>
+<p>Continuação direta do MW1! (BAIXE O FDM PARA BAIXAR TORRENTS RÁPIDOS!)</p>
+<a class="btn" href="https://www.mediafire.com/file/ep17lc8bv8tyh5x/Call_of_Duty_Modern_Warfare_2_%2528v1.0%2529_%255BDarck_Repack%255D.torrent/file" target="_blank">BAIXAR</a>
+<a class="btn" href="https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe" target="_blank">FDM</a>
 </div>
 </div>
 
@@ -1925,18 +2034,19 @@ header p{
 <span class="close" onclick="closeModal('ads')">×</span>
 <h2>Remover anúncios</h2>
 <p>Tutorial de como remover anuncios de jogos/apps para Android.</p>
-<a class="btn" href="https://www.mediafire.com/file/qnpflr1dmhy977k/NO+ADs+ANDROID.zip/file" target="_blank">BAIXAR</a>
+<a class="btn" href="https://noadsandroid.blogspot.com/2026/02/portugues-agora-irei-te-mostrar-o-passo.html" target="_blank">BAIXAR</a>
 </div>
 </div>
 
 <div id="modal-update" class="modal">
   <div class="modal-box">
     <span class="close" onclick="document.getElementById('modal-update').style.display='none'">×</span>
-    <h2>Última Atualização - 08/02/2026</h2>
-    <p style="margin:15px 0;">Novidades dessa versão: (V0.9)</p>
+    <h2>Última Atualização - 09/02/2026</h2>
+    <p style="margin:15px 0;">Novidades dessa versão: (V0.9.1)</p>
     <ul style="text-align:left; padding-left:20px; color:#ccc;">
-      <li>Novos jogos PC: God of War 2018, Days Gone, Battlefield 6, 171, Madagascar, Assassin’s Creed 2008, UNO, Happy Wheels, Fireboy and Lavagirl, Call of Duty MW1, GTA V.</li>
-      <li>Novo app/jogo mobile: Undertale, PojavLauncher, GTA SAN, SixGuns, Naruto Senki, Second Kick, Smartplay+, Hollow Knight Silksong.</li>
+      <li>Novos jogos PC: COD MW2, COD MW3, GRANNY, CRAZZY TAXI, WIN 7 GAMES</li>
+      <li>Novas ferramentas PC:</li>
+      <li>Novo app/jogo mobile: Bully, Octopus.</li>
       <li>Atualização geral: Mudanças de UI.</li>
     </ul>
     <button class="btn" onclick="document.getElementById('modal-update').style.display='none'">Fechar</button>
