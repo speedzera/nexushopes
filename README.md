@@ -13,9 +13,9 @@ I always bring updates!
 
 -------------------------------------------
 
-Last updated: February 8, 2026
+Last updated: February 9, 2026
 
-Version: 0.9
+Version: 0.9.1
 
 -------------------------------------------
 
